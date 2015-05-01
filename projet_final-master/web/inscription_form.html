@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<polymer-element name="inscription-form" attributes="action">
+<template>
+    <link rel="stylesheet" href="css/demoIns.css"/>
+    <link rel="stylesheet" href="css/styleIns.css"/>
+
+<div id="message"></div>
+
+<div class="container">
+  <div class="form">
+    <form id="inscriptionForm" method="post" on-submit="{{doSubmit}}">
+
+            <p class="contact"><label for="username">Username</label></p> 
+            <input id="user" type="text" value="{{inscription.username}}"
+              name="username" placeholder="username" required /><label id="verifyUsername" style="color:red;"></label>
+   
+            <p class="contact"><label for="password">Password</label></p> 
+            <input id="password" type="password" value="{{inscription.password}}"
+              name="password" placeholder="password" required />
+              
+            <p class="contact"><label for="lastName">Last Name</label></p> 
+            <input id="lastName" type="text" value="{{inscription.lastName}}"
+              name="lastName" placeholder="Last Name" required/>
+         
+            <p class="contact"><label for="firstName">First Name</label></p> 
+            <input id="firstName" type="text" value="{{inscription.firstName}}"
+              name="firstName" placeholder="First Name" required/>
+       
+            <p class="contact"><label for="email">Email</label></p>
+            <input id="email" type="email" value="{{inscription.email}}"
+              name="email" placeholder="example@domain.com" required /><label id="verifyEmail" style="color:red;"></label>
+   
+            <p class="contact"><label for="country">Country</label></p>
+            <input id="textCountry" type="text" value="{{inscription.country}}"
+              name="country" list="countries" placeholder="Tape letters"/>
+              <div id="listCountries"></div>
+     
+            <p class="contact"><label for="province">Province</label></p>
+            <input id="textProv" type="text" value="{{inscription.province}}"
+              name="province" list="provinces" />
+              <div id="listProvinces"></div>
+ 
+            <p class="contact"><label for="city">City</label></p>
+            <input type="text" value="{{inscription.city}}" name="city" />
+      
+            <input id="inscriptionButton" type="submit" class="buttom" name="inscriptionButton" value="Register"/>
+             
+    </form>
+</div>      
+</div>
+</template> <script type="application/dart" src="inscription_form.dart"></script> </polymer-element>

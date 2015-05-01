@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>game</title>
+    <link rel="stylesheet" href="Breakout.css">
+  </head>
+ 
+  <body>
+  <table>
+    <tr>
+      <th>
+        <div id="content">
+          <canvas id="canvas" width="600" height="420" style="border:1px"></canvas>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <input id="start" type="button" value="Start"/>
+        <input id="pause" type="button" value="Pause"/>
+        <input id="new" type="button" value="New"/>
+      </th>
+    </tr>
+    <tr>
+      <th>
+      <div id="aside">
+        <label for="background">Background</label>
+        <input id="backgroundColor" type="text" list="backColors" placeholder="Choose a color"/>
+              <datalist id="backColors">
+                <option value="Black"/>
+                <option value="White"/>
+                <option value="Red"/>
+                <option value="Blue"/>
+                <option value="Yellow"/>
+                <option value="Green"/>
+              </datalist>
+        
+        <label for="ballcolor">Ball color</label>
+        <input id="ballColor" type="text" list="ballColors" placeholder="Choose a color"/>
+              <datalist id="ballColors">
+                <option value="Black"/>
+                <option value="White"/>
+                <option value="Red"/>
+                <option value="Blue"/>
+                <option value="Yellow"/>
+                <option value="Green"/>
+              </datalist>
+              
+        <label for="barrecolor">Paddle color</label>
+        <input id="barreColor" type="text" list="barreColors" placeholder="Choose a color"/>
+              <datalist id="barreColors">
+                <option value="Black"/>
+                <option value="White"/>
+                <option value="Red"/>
+                <option value="Blue"/>
+                <option value="Yellow"/>
+                <option value="Green"/>
+              </datalist>
+        
+        <label for="barrecolor">Speed</label>    
+        <input id="ballSpeed" type="range" min="1" max="20" step="2" value="10"/>
+        
+
+      </div>
+      </th>
+    </tr>
+    </table>
+    
+    <script type="application/dart" src="Breakout.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

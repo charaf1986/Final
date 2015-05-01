@@ -1,0 +1,13 @@
+name: Projet
+description: A sample web application
+dependencies:
+  bootjack: any
+  browser: any
+  cookie: any
+  http_server: any
+  io: any
+  math: any
+  options_file: any
+  polymer: '>=0.9.0 <0.10.0'
+  route: any
+  sqljocky: any

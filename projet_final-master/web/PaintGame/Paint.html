@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paint Game</title>
+<link rel="stylesheet" href="Paint.css">
+</head>
+<body>
+
+  <div id="container">
+
+  <div id="navigation">
+    <ul>
+      <li><label id="menuNew">New</label></li>
+      <!--<li><label id="menuSave" class="btn go">Save</label></li>-->
+      
+      <li><div class="container">
+        <p><a href="#modal"><label id="menuSave" >Save</label></a></p>
+      </div>
+      
+      <div id="modal">
+        <div class="modal-content">
+          <div class="header">
+            <h2>Right click, Save as...</h2>
+          </div>
+      
+          <div class="copy" align="center">
+              <img id="canvasImg" alt="Right click to save me!" ><br>
+              Title<input id="titleDraw" type="text" required/>
+              <input id="buttonSaveDraw" type="submit" value="Save"/>
+          </div>
+      
+          <div class="cf footer">
+            <a href="#" class="btn">Close</a>
+          </div>
+        </div>
+      </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--<img id="canvasImg" alt="Right click to save me!">-->
+  
+  <input type="file" name="pic" id="pic" accept="image/gif, image/jpeg, image/png"/>
+  <div id="content-container">
+    <div id="content">
+<canvas id="canvasPaint" width="600" height="420"></canvas>
+    
+    </div>
+    
+        <div id="aside">
+            <div id="colors">
+            <b>Colors</b><br>
+              <input id="colorButtonNoir" type="image" src="../images/Noir.png" width="40" height="40"/>
+              <input id="colorButtonRouge" type="image" src="../images/Rouge.png" width="40" height="40"/>
+              <input id="colorButtonBleu" type="image" src="../images/Bleu.png" width="40" height="40"/>
+              <input id="colorButtonJaune" type="image" src="../images/Jaune.png" width="40" height="40"/>
+              <input id="colorButtonPurple" type="image" src="../images/Violet.png" width="40" height="40"/>
+              <input id="colorButtonGreen" type="image" src="../images/Vert.png" width="40" height="40"/>
+            </div>
+            
+            <div id="size">
+            <b>Size</b><br>
+              <input id="sizeButtonSmall" type="image" src="../images/small.png"/><br>
+              <input id="sizeButtonMedium" type="image" src="../images/medium.png"/><br>
+              <input id="sizeButtonBig" type="image" src="../images/big.png"/>
+            </div>
+            
+            <div id="tools">
+            <b>Tools</b><br>
+              <input id="toolButtonCrayon" type="image" src="../images/pencil.png"/>
+              <input id="toolButtonMarker" type="image" src="../images/marker.jpg"/>
+              <input id="toolButtonEraser" type="image" src="../images/eraser.jpg"/>
+            </div>
+        </div>
+  </div>
+</div>
+
+  
+    <script type="application/dart" src="Paint.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+</body>
+</html>

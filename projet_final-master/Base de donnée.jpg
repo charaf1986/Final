@@ -1,0 +1,30 @@
+CREATE TABLE department (
+   departmentId INTEGER PRIMARY KEY NOT NULL,
+   name TEXT NOT NULL ,
+   budget REAL NOT NULL 
+ );
+
+ CREATE TABLE typebankaccount (
+   typebankaccountId INTEGER PRIMARY KEY NOT NULL,
+   name TEXT NOT NULL
+ );
+ 
+ CREATE TABLE employee (
+   employeeId INTEGER PRIMARY KEY NOT NULL,
+   first_name TEXT NOT NULL ,
+   last_name TEXT NOT NULL ,
+   departmentId INTEGER NOT NULL , 
+   CONSTRAINT fk_department_departmentId FOREIGN KEY(departmentId) 
+   REFERENCES department(departmentId)
+ );
+
+ CREATE TABLE bankaccount (
+   bankaccountId INTEGER PRIMARY KEY NOT NULL,
+   account_number TEXT NOT NULL ,
+   typebankaccountId INTEGER NOT NULL , 
+   employeeId INTEGER NOT NULL , 
+   CONSTRAINT fk_bankaccount_employeeId FOREIGN KEY(employeeId) 
+   REFERENCES employee(employeeId),
+   CONSTRAINT fk_bankaccount_typebankaccountId FOREIGN KEY(typebankaccountId) 
+   REFERENCES typebankaccount(typebankaccountId)
+ );

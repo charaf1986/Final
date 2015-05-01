@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accueil</title>
+  <link href="css/demo.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
+<link rel="import" href="connexion_form.html">
+<link rel="import" href="inscription_form.html">
+</head>
+<body>
+
+
+<connexion-form action="http://localhost:8888/submit"></connexion-form>
+
+
+<div class="container">
+    <p><a href="#modal" class="btn go">Register</a></p>
+  </div>
+
+  <div id="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h2>New user</h2>
+      </div>
+      <div class="copy">
+        <inscription-form action="http://localhost:8888/submit"></inscription-form>
+      </div>
+      <div class="cf footer">
+        <a href="#" class="btn">Close</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+
+
+  <script type="application/dart">export 'package:polymer/init.dart';</script>
+  <!--<script type="application/dart" src="sss.dart"></script>-->
+  <script src="packages/browser/dart.js"></script>
+</body>
+</html>

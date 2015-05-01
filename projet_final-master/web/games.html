@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Games</title>
+<link rel="stylesheet" href="games.css">
+  </head>
+ 
+  <body>
+  
+  <div class="wrap">
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Hello <label id="username"></label> !</a>
+          <ul>
+            <li><a><label id="labLogout" for="logout">Logout</label></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+<table>
+<tr>
+  <th><div class="primary">
+    <img id ="imgBreakout" src="images/imgBreakout.png" alt="" />
+  </div></th>
+  
+  <th><div class="primary">
+    <img id ="imgPaint" src="images/imgPaint.png" alt="" /><br>
+    <input id="buttBestDraws" type="button" value="Best Draws"/> 
+  </div></th>
+</tr>
+</table>
+   
+    <script type="application/dart" src="games.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
