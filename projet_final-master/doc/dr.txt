@@ -1,0 +1,13 @@
+pf
+
+51/60
+(-1) pubspec: sqljocky: any ?
+(-1) pas de lib
+(-1) avertissement dans le code
+import '../control/ControlInscription.dart';
+(-1) le formatage du code
+BreakoutControl.dart  --> breakout_control.dart
+(-1) games.html vs. projet.html
+(-2) ne pourrait pas entrer un nouvel utilisateur
+(-2) README: import database from Bd directory then configure the file bin/files/connection.options.
+on ne sait pas quoi faire?!
